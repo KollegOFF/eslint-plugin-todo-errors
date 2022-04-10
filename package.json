@@ -1,0 +1,46 @@
+{
+  "name": "eslint-plugin-todo-errors",
+  "version": "0.0.0",
+  "description": "An easy way to add ESLint or new rules for it to your project.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "homepage": "https://github.com/KollegOFF/eslint-plugin-todo-errors#readme",
+  "bugs": {
+    "url": "https://github.com/KollegOFF/eslint-plugin-todo-errors/issues"
+  },
+  "license": "MIT",
+  "author": "KollegOFF",
+  "files": [
+    "/bin/*",
+    "/lib/*"
+  ],
+  "main": "lib/index.js",
+  "bin": {
+    "update-todo-errors": "./bin/update-todo-errors.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KollegOFF/eslint-plugin-todo-errors.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "mocha \"./tests/*.test.js\""
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-plugin-eslint-plugin": "^4.0.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-todo-errors": "file:.",
+    "mocha": "^9.1.3",
+    "proxyquire": "^2.1.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=6"
+  },
+  "engines": {
+    "node": "10.x || 12.x || 14.x || >= 16"
+  }
+}

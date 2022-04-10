@@ -1,0 +1,6 @@
+{
+  "tests/narmal-module.js": [
+    { "ruleId": "no-unused-vars", "line": 1, "column": 25 },
+    { "ruleId": "no-unused-vars", "line": 1, "column": 28 }
+  ]
+}
