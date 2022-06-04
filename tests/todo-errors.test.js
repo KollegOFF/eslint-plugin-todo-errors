@@ -18,7 +18,7 @@ describe('todo-errors', function () {
       { ruleId: 'rule-2', severity: 2, message: 'error', line: 1, column: 1 },
     ];
 
-    const actual = processor([[
+    const actual = processor.postprocess([[
       ...expected,
       { ruleId: 'rule-1', severity: 2, message: 'error', line: 0, column: 0 },
       { ruleId: 'rule-2', severity: 2, message: 'error', line: 5, column: 10 },
@@ -42,7 +42,7 @@ describe('todo-errors', function () {
 
     const expected = [];
 
-    const actual = processor([[
+    const actual = processor.postprocess([[
       { ruleId: 'rule-1', severity: 2, message: 'error', line: 0, column: 0 },
       { ruleId: 'rule-2', severity: 2, message: 'error', line: 1, column: 1 },
       { ruleId: 'rule-2', severity: 2, message: 'error', line: 5, column: 10 },
@@ -60,7 +60,7 @@ describe('todo-errors', function () {
 
     const expected = [];
 
-    const actual = processor([expected], 'src/file.js');
+    const actual = processor.postprocess([expected], 'src/file.js');
 
     assert.deepStrictEqual(actual, expected);
   });
@@ -83,7 +83,7 @@ describe('todo-errors', function () {
       { ruleId: 'rule-3', severity: 1, message: 'warning', line: 5, column: 10 },
     ];
 
-    const actual = processor([expected], 'src/file.js');
+    const actual = processor.postprocess([expected], 'src/file.js');
 
     assert.deepStrictEqual(actual, expected);
   });

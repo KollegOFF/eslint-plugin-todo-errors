@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+- Preventing automatically fix problems when `eslint` runs with `--fix` option and this plugin is active.
+
 ## [0.2.0] - 2022-04-27
 
 ### Added
